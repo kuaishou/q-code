@@ -19,6 +19,7 @@
             <input node-type="jsbridge" type="file" name="myPhoto" value="扫描二维码2" />
         </div>
     </div>
+    <input type="number"/>
     <div class="result-qrcode">
     </div>
     <script src="lib/zepto.js"></script>
@@ -67,6 +68,7 @@
                                 qrcode.decode(oFREvent.target.result);
                                 qrcode.callback = function(data) {
                                     //得到扫码的结果
+                                    console.log("aa")
                                     location.href = data;
                                 };
                             };
